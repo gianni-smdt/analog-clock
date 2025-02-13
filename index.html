@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Festlegen von Darstellungsparametern-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt GWT - Analoge Uhr mit Zeitzonenauswahl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Definition der Klassen zur Darstellung der Uhr-->
+    <div class="clock">
+        <div class="clock-face">
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+            <div class="hand second-hand"></div>
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+        </div>
+    </div>
+
+    <!-- Dropdown-Menü für die Zeitzonenauswahl -->
+    <div class="timezone-selector">
+        <label for="timezone">Time Zone:</label>
+        <select id="timezone">
+            <option value="UTC" selected>UTC</option>
+            <option value="Europe/Berlin">CEST (Europe/Berlin)</option>
+            <option value="America/New_York">EDT (North America/New York)</option>
+            <option value="America/Rio_Branco">ACT (South America/Rio Branco)</option>
+            <option value="Asia/Tokyo">JST (Asia/Tokyo)</option>
+            <option value="Australia/Canberra">	AEST (Australia/Canberra)</option>
+            <option value="Africa/Nairobi">	EAT (Africa/Nairobi)</option>
+        </select>
+    </div>
+
+    <!-- Verweis auf JS-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>

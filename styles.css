@@ -1,0 +1,103 @@
+/* Darstellungseigenschaften des Dokuments */
+body {
+    display: flex;
+    flex-direction: column; /* Ermöglicht vertikale Anordnung */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    margin: 0;
+}
+
+/* Darstellungseigenschaften der Uhr */
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 20px solid black;
+    border-radius: 50%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+/* Darstellungseigenschaften des Ziffernblatts */
+.clock-face {
+    position: relative;
+    width: 100%; /* Beansprucht gesamtes Ziffernblatt */
+    height: 100%;
+    transform: translateY(-3px); /* Behebt Fehler bei der Positionierung der Zeiger */
+}
+
+/* Darstellungseigenschaften der Zeiger */
+.hand {
+    width: 50%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+/* Stundenzeiger */
+.hour-hand {
+    height: 7px;
+}
+
+/* Minutenzeiger */
+.minute-hand {
+    height: 4px;
+    background: black;
+}
+
+/* Sekundenzeiger */
+.second-hand {
+    height: 2px;
+    background: red;
+}
+
+/* Darstellungseigenschaften der Nummern */
+.number {
+    position: absolute;
+    font-size: 24px;
+    transform: translate(-50%, -50%); /* Mittelpunkt der Zahl liegt genau auf der festgelegten Position */
+}
+
+/* Position der Nummern */
+.number1  { top: 13%; left: 72%; }
+.number2  { top: 28%; left: 88%; }
+.number3  { top: 50%; left: 95%; }
+.number4  { top: 72%; left: 88%; }
+.number5  { top: 87%; left: 72%; }
+.number6  { top: 95%; left: 50%; }
+.number7  { top: 87%; left: 28%; }
+.number8  { top: 72%; left: 12%; }
+.number9  { top: 50%; left: 5%; }
+.number10 { top: 28%; left: 12%; }
+.number11 { top: 13%; left: 28%; }
+.number12 { top: 5%; left: 50%; }
+
+/* Dropdown-Menü zur Auswahl */
+.timezone-selector {
+    margin-top: 40px; /* Lücke zwischen der Uhr und dem Auswahlmenü */
+}
+
+/* Darstellungseigenschaften des Dropdown-Menüs */
+#timezone {
+padding: 5px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+background-color: #fff;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+appearance: none; /* Für gleiches Aussehen in allen Browsern */
+cursor: pointer;
+}
+
+/* Darstellungsverhalten des Dropdown-Menüs bei Interaktion durch Benutzer*/
+#timezone:focus {
+outline: none;
+border-color: #888;
+}
